@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Styled.h1>{data.markdownRemark.frontmatter.title}</Styled.h1>
+        <Styled.h1>{data.datoCmsBlogPost.title}</Styled.h1>
         <Styled.p
           sx={{
             fontStyle: `italic`,
@@ -18,12 +18,12 @@ export default ({ data }) => {
             mb: 1,
           }}
         >
-          {data.markdownRemark.frontmatter.date} — by{" "}
-          {data.markdownRemark.frontmatter.author}
+          {data.datoCmsBlogPost.meta.createdAt} — by{" "}
+          {data.datoCmsBlogPost.author}
         </Styled.p>
         <Styled.div
           dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html,
+            __html: data.datoCmsBlogPost.bodyNode.childMarkdownRemark.html,
           }}
         />
       </div>
@@ -33,13 +33,17 @@ export default ({ data }) => {
 
 export const query = graphql`
   query blogpost($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        date(formatString: "YYYY-MM-DD")
-        author
+    datoCmsBlogPost(id: { eq: $id }) {
+      title
+      meta {
+        createdAt(formatString: "YYYY-MM-DD")
       }
-      html
+      author
+      bodyNode {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   }
 `

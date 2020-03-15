@@ -19,13 +19,13 @@ const IndexPage = ({ data }) => {
 
       <Styled.h2>Posts</Styled.h2>
       <div sx={{ mb: 4 }}>
-        {data.allMarkdownRemark.nodes.map(post => (
+        {data.allDatoCmsBlogPost.nodes.map(post => (
           <div>
             <Link
-              to={post.fields.slug}
+              to={post.slug}
               sx={{ textDecoration: `inherit`, color: `inherit` }}
             >
-              <Styled.h3>{post.frontmatter.title}</Styled.h3>
+              <Styled.h3>{post.title}</Styled.h3>
               <Styled.p
                 sx={{
                   fontStyle: `italic`,
@@ -34,9 +34,11 @@ const IndexPage = ({ data }) => {
                   mb: 1,
                 }}
               >
-                {post.frontmatter.date} — by {post.frontmatter.author}
+                {post.meta.createdAt} — by {post.author}
               </Styled.p>
-              <Styled.p sx={{ mt: 1 }}>{post.excerpt}</Styled.p>
+              <Styled.p sx={{ mt: 1 }}>
+                {post.bodyNode.childMarkdownRemark.excerpt}
+              </Styled.p>
             </Link>
           </div>
         ))}
@@ -49,17 +51,18 @@ export default IndexPage
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark {
+    allDatoCmsBlogPost {
       nodes {
-        frontmatter {
-          title
-          date(formatString: "YYYY-MM-DD")
-          author
+        bodyNode {
+          childMarkdownRemark {
+            excerpt
+          }
         }
-        excerpt
-        html
-        fields {
-          slug
+        title
+        slug
+        author
+        meta {
+          createdAt(formatString: "YYYY-MM-DD")
         }
       }
     }
