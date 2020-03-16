@@ -1,13 +1,23 @@
-import { tailwind as baseStyles } from "@theme-ui/presets"
+import { tailwind as baserStyles } from "@theme-ui/presets"
+import { toTheme } from "@theme-ui/typography"
 
-// console.log({ baseStyles })
+const stuff = toTheme({
+  baseFontSize: 16,
+  baseLineHeight: 1.5,
+  // blockMarginBottom: 1.4,
+  scaleRatio: 2.25,
+  bodyFontFamily: ["arvo", "sans-serif"],
+  headingFontFamily: ["montserrat", "sans-serif"],
+})
+
+console.log({ baserStyles, stuff })
+
+let baseStyles = { ...baserStyles, ...stuff }
 
 export default {
   ...baseStyles,
   fonts: {
     ...baseStyles.fonts,
-    body: "arvo, sans-serif",
-    heading: "montserrat,sans-serif",
   },
   styles: {
     ...baseStyles.styles,

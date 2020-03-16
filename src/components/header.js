@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
     <div
       sx={{
         margin: `0 auto`,
-        maxWidth: 960,
+        maxWidth: 600,
         py: 4,
         px: 3,
       }}

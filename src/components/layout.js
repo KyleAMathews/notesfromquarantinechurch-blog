@@ -26,12 +26,13 @@ const Layout = ({ children }) => {
       <div
         sx={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 600,
           padding: 3,
           paddingTop: 0,
         }}
       >
         <main>{children}</main>
+        <Styled.hr />
         <footer>
           <Styled.p>
             © {new Date().getFullYear()}, Built with

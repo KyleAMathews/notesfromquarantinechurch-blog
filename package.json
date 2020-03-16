@@ -9,6 +9,7 @@
     "@mdx-js/react": "^1.5.1",
     "@theme-ui/components": "^0.3.1",
     "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/typography": "^0.3.0",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-manifest": "^2.2.27",
