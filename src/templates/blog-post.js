@@ -22,6 +22,11 @@ export default ({ data }) => {
           {data.datoCmsBlogPost.author}
         </Styled.p>
         <Styled.div
+          sx={{
+            "li > p": {
+              margin: 0,
+            },
+          }}
           dangerouslySetInnerHTML={{
             __html: data.datoCmsBlogPost.bodyNode.childMarkdownRemark.html,
           }}
