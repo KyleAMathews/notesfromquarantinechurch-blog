@@ -4,7 +4,7 @@ import { toTheme } from "@theme-ui/typography"
 const stuff = toTheme({
   baseFontSize: 16,
   baseLineHeight: 1.5,
-  // blockMarginBottom: 1.4,
+  blockMarginBottom: 0.8,
   scaleRatio: 2.25,
   bodyFontFamily: ["arvo", "sans-serif"],
   headingFontFamily: ["montserrat", "sans-serif"],

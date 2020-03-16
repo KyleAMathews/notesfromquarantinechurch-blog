@@ -2,6 +2,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Styled, jsx } from "theme-ui"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
@@ -9,28 +10,27 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Styled.h2>{data.datoCmsBlogPost.title}</Styled.h2>
+        <Styled.h2 sx={{ mb: 2 }}>{data.datoCmsBlogPost.title}</Styled.h2>
         <Styled.p
           sx={{
             fontStyle: `italic`,
             fontSize: 0,
             mt: 0,
-            mb: 1,
+            mb: 2,
           }}
         >
           {data.datoCmsBlogPost.meta.createdAt} — by{" "}
           {data.datoCmsBlogPost.author}
         </Styled.p>
-        <Styled.div
+        <MDXRenderer
           sx={{
             "li > p": {
               margin: 0,
             },
           }}
-          dangerouslySetInnerHTML={{
-            __html: data.datoCmsBlogPost.bodyNode.childMarkdownRemark.html,
-          }}
-        />
+        >
+          {data.datoCmsBlogPost.bodyNode.childMdx.body}
+        </MDXRenderer>
       </div>
     </Layout>
   )
@@ -45,8 +45,8 @@ export const query = graphql`
       }
       author
       bodyNode {
-        childMarkdownRemark {
-          html
+        childMdx {
+          body
         }
       }
     }

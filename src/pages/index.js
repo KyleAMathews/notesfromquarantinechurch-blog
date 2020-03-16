@@ -12,9 +12,13 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Styled.p>
-        On March 10, President Nelson took the unprecedented step of stopping
-        all church meeting world-wide impacting millions of members. This is
-        some of our gospel study notes.
+        On March 10,{" "}
+        <a href="https://newsroom.churchofjesuschrist.org/article/gatherings-worldwide-temporarily-suspended">
+          President Nelson took the unprecedented step of suspending all church
+          meetings world-wide
+        </a>{" "}
+        impacting millions of members. A few of us decided to write our gospel
+        study notes from our home church studies.
       </Styled.p>
 
       <Styled.h2>Posts</Styled.h2>

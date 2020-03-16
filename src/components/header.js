@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
   <Styled.div
     as="header"
     sx={{
-      // background: `background`,
+      background: `background`,
       marginBottom: 4,
     }}
   >
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           sx={{
-            // color: `muted`,
+            color: `muted`,
             textDecoration: `none`,
           }}
         >
