@@ -3,6 +3,7 @@ import { Styled, jsx } from "theme-ui"
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "normalize.css"
 import "typeface-montserrat"
 import "typeface-arvo"
@@ -31,6 +32,9 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
+        <Helmet titleTemplate="%s | Dispatches from the Quarantine Church">
+          <title>{data.site.siteMetadata.title}</title>
+        </Helmet>
         <main>{children}</main>
         <Styled.hr />
         <footer>

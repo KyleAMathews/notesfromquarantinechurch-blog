@@ -3,12 +3,20 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { Styled, jsx } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
   console.log({ data })
   return (
     <Layout>
+      <Helmet>
+        <title>{data.datoCmsBlogPost.title}</title>
+        <meta
+          name="description"
+          content={data.datoCmsBlogPost.bodyNode.childMdx.export}
+        />
+      </Helmet>
       <article>
         <Styled.h1 sx={{ mb: 2 }}>{data.datoCmsBlogPost.title}</Styled.h1>
         <Styled.p
@@ -16,7 +24,7 @@ export default ({ data }) => {
             fontStyle: `italic`,
             fontSize: 0,
             mt: 0,
-            mb: 2,
+            mb: 3,
           }}
         >
           {data.datoCmsBlogPost.meta.createdAt} — by{" "}
@@ -47,6 +55,7 @@ export const query = graphql`
       bodyNode {
         childMdx {
           body
+          excerpt
         }
       }
     }
