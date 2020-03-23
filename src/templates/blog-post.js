@@ -9,10 +9,8 @@ export default ({ data }) => {
   console.log({ data })
   return (
     <Layout>
-      <div>
-        <Styled.h2 sx={{ mb: 2, fontSize: 5 }}>
-          {data.datoCmsBlogPost.title}
-        </Styled.h2>
+      <article>
+        <Styled.h1 sx={{ mb: 2 }}>{data.datoCmsBlogPost.title}</Styled.h1>
         <Styled.p
           sx={{
             fontStyle: `italic`,
@@ -33,7 +31,7 @@ export default ({ data }) => {
         >
           {data.datoCmsBlogPost.bodyNode.childMdx.body}
         </MDXRenderer>
-      </div>
+      </article>
     </Layout>
   )
 }
