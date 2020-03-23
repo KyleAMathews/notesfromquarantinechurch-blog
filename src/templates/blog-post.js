@@ -10,7 +10,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Styled.h2 sx={{ mb: 2 }}>{data.datoCmsBlogPost.title}</Styled.h2>
+        <Styled.h2 sx={{ mb: 2, fontSize: 5 }}>
+          {data.datoCmsBlogPost.title}
+        </Styled.h2>
         <Styled.p
           sx={{
             fontStyle: `italic`,
