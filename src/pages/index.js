@@ -55,7 +55,7 @@ export default IndexPage
 
 export const query = graphql`
   query MyQuery {
-    allDatoCmsBlogPost {
+    allDatoCmsBlogPost(sort: { fields: meta___createdAt, order: DESC }) {
       nodes {
         bodyNode {
           childMarkdownRemark {
