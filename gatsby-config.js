@@ -33,7 +33,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-datocms`,
+      resolve: `@gatsbyjs/gatsby-source-datocms`,
       options: {
         // You can find your read-only API token under the Settings > API tokens
         // section of your administrative area:
