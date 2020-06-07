@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dispatches from the Quarantine Church`,
     description: `Notes from church members weekly home studies`,
-    author: `@gatsbyjs`,
+    author: `@kylemathews`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,7 +33,7 @@ module.exports = {
       },
     },
     {
-      resolve: `@gatsbyjs/gatsby-source-datocms`,
+      resolve: `gatsby-source-datocms`,
       options: {
         // You can find your read-only API token under the Settings > API tokens
         // section of your administrative area:
