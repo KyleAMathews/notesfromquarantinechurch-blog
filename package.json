@@ -6,7 +6,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@gatsbyjs/gatsby-source-datocms": "^2.2.2",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
     "@theme-ui/components": "^0.3.1",
@@ -20,6 +19,7 @@
     "gatsby-plugin-react-helmet": "^3.2.0",
     "gatsby-plugin-sharp": "^2.2.37",
     "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-source-datocms": "^2.2.5",
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-theme-style-guide": "^0.3.1",
     "gatsby-transformer-remark": "^2.6.58",
