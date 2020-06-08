@@ -10,8 +10,6 @@ const stuff = toTheme({
   headingFontFamily: ["montserrat", "sans-serif"],
 })
 
-console.log({ baserStyles, stuff })
-
 let baseStyles = { ...baserStyles, ...stuff }
 
 export default {
