@@ -31,8 +31,9 @@ const Layout = ({ children }) => {
             boxSizing: "border-box",
           },
           li: {
+            marginBottom: theme.space[1],
             "& > p": {
-              marginBottom: theme.space[2],
+              marginBottom: theme.space[1],
               marginTop: 0,
             },
           },
