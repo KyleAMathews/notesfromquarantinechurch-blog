@@ -48,6 +48,9 @@
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
+  "resolutions": {
+    "@mdx-js/react": "^1.6.16"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
