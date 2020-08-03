@@ -7,7 +7,7 @@ const stuff = toTheme({
   blockMarginBottom: 0.8,
   scaleRatio: 2.25,
   bodyFontFamily: ["arvo", "sans-serif"],
-  headingFontFamily: ["montserrat", "sans-serif"],
+  headerFontFamily: ["montserrat", "sans-serif"],
 })
 
 let baseStyles = { ...baserStyles, ...stuff }

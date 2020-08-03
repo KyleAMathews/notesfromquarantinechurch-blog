@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { Styled, jsx } from "theme-ui"
+import { graphql } from "gatsby"
+import { Styled, jsx, ThemeProvider, useThemeUI } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  console.log({ data })
+  const context = useThemeUI()
   return (
     <Layout>
       <Helmet>
@@ -30,15 +30,17 @@ export default ({ data }) => {
           {data.datoCmsBlogPost.meta.createdAt} — by{" "}
           {data.datoCmsBlogPost.author}
         </Styled.p>
-        <MDXRenderer
-          sx={{
-            "li > p": {
-              margin: 0,
-            },
-          }}
-        >
-          {data.datoCmsBlogPost.bodyNode.childMdx.body}
-        </MDXRenderer>
+        <ThemeProvider theme={context.theme}>
+          <MDXRenderer
+            sx={{
+              "li > p": {
+                margin: 0,
+              },
+            }}
+          >
+            {data.datoCmsBlogPost.bodyNode.childMdx.body}
+          </MDXRenderer>
+        </ThemeProvider>
       </article>
     </Layout>
   )
