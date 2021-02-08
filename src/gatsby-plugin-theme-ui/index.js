@@ -19,5 +19,8 @@ export default {
   },
   styles: {
     ...baseStyles.styles,
+    "code, kbd, samp": {
+      fontFamily: `'arvo',sans-serif`,
+    },
   },
 }
