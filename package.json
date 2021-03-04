@@ -13,31 +13,32 @@
     "@theme-ui/components": "^0.3.1",
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/typography": "^0.3.0",
-    "gatsby": "^2.30.2",
-    "gatsby-image": "^2.2.31",
-    "gatsby-plugin-manifest": "^2.2.27",
-    "gatsby-plugin-mdx": "^1.0.82",
-    "gatsby-plugin-offline": "^3.0.19",
-    "gatsby-plugin-react-helmet": "^3.2.0",
-    "gatsby-plugin-sharp": "2.6.41",
+    "gatsby": "^3.0.1",
+    "gatsby-image": "^3.0.0",
+    "gatsby-plugin-manifest": "^3.0.0",
+    "gatsby-plugin-mdx": "^2.0.0",
+    "gatsby-plugin-offline": "^4.0.0",
+    "gatsby-plugin-react-helmet": "^4.0.0",
+    "gatsby-plugin-sharp": "3.0.0",
     "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-source-datocms": "^2.2.5",
-    "gatsby-source-filesystem": "2.3.34",
+    "gatsby-source-datocms": "^2.5.17",
+    "gatsby-source-filesystem": "3.0.0",
     "gatsby-theme-style-guide": "^0.3.1",
-    "gatsby-transformer-remark": "2.8.38",
-    "gatsby-transformer-sharp": "^2.3.3",
+    "gatsby-transformer-remark": "3.0.0",
+    "gatsby-transformer-sharp": "^3.0.0",
     "normalize.css": "^8.0.1",
+    "process-top": "^1.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "slug": "^2.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "slug": "^4.0.3",
     "theme-ui": "^0.3.1",
     "typeface-arvo": "^1.1.3",
-    "typeface-montserrat": "^0.0.75"
+    "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "gatsby"
@@ -49,7 +50,8 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "resolutions": {
-    "@mdx-js/react": "^1.6.16"
+    "@mdx-js/react": "^1.6.16",
+    "sharp": "^0.27.0"
   },
   "scripts": {
     "build": "gatsby build",
