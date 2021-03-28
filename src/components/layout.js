@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import "normalize.css"
 import "typeface-montserrat"
 import "typeface-arvo"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 
 import Header from "./header"
 
@@ -26,18 +26,21 @@ const Layout = ({ children }) => {
     <Styled.root>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Global
-        styles={theme => ({
-          "*": {
-            boxSizing: "border-box",
-          },
-          li: {
-            marginBottom: theme.space[1],
-            "& > p": {
-              marginBottom: theme.space[1],
-              marginTop: 0,
+        styles={(theme) => {
+          console.log({ theme })
+          return {
+            "*": {
+              boxSizing: "border-box",
             },
-          },
-        })}
+            li: {
+              marginBottom: theme.space[1],
+              "& > p": {
+                marginBottom: theme.space[1],
+                marginTop: 0,
+              },
+            },
+          }
+        }}
       />
       <div
         sx={{

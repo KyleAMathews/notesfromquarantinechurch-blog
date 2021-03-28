@@ -11,6 +11,12 @@ const stuff = toTheme({
 })
 
 let baseStyles = { ...baserStyles, ...stuff }
+baseStyles.styles.blockquote = {
+  margin: 0,
+  // ml: 2,
+  pl: 2,
+  borderLeft: `9.5px solid lightgray`,
+}
 
 export default {
   ...baseStyles,
