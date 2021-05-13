@@ -15,7 +15,7 @@ baseStyles.styles.blockquote = {
   margin: 0,
   // ml: 2,
   pl: 2,
-  borderLeft: `9.5px solid lightgray`,
+  borderLeft: `4.75px solid lightgray`,
 }
 
 export default {
